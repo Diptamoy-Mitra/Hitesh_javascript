@@ -37,11 +37,11 @@ console.log(typeof myArr)  //object
 console.log(typeof newArr) //string
 
 //slice
-console.log(myArr) //[ 0, 1, 2,    3, 4, 5, true]
+console.log(myArr) //[ 0, 1, 2,  3, 4, 5, true]
 console.log("A ",myArr)          //  A  [
-                                 //       0, 1, 2,    3,
+                                 //       0, 1, 2,  3,
                                  //       4, 5, true
-                                  //    ]
+                                 //    ]
 
 const myn1=myArr.slice(1,3)
 console.log(myn1) //[ 1, 2 ]
