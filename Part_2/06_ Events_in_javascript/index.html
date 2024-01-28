@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Events in JS</title>
 </head>
-<body>
-  
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Amazing image</h2>
+  <div>
+    <ul id="images">
+      <li><img width="200px" id="photoshop"
+          src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="photoshop"></li>
+      <li><img width="200px" id="japan"
+          src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="river"
+          src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="owl"
+          src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="prayer"
+          src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+  </div>
 </body>
+<script>
+  //features kom dai, tai eta use krbo na
+  // document.getElementById('owl').onclick=function(){
+  //   alert('You clicked on owl') 
+  // }
+
+  //best way with features //addEventListener
+  // document.getElementById('owl').addEventListener('click', function () {
+  //   alert('You clicked on owl')
+  // },false)         //false default
+  //attachEvent()
+  //Jquery -->on
+
+
+  // document.getElementById('owl').addEventListener('click', function (e) {
+  //     console.log(e) //PointerEvent {isTrusted: true, pointerId: 3, width: 1, height: 1, pressure: 0, …}
+
+  //     //events example
+  //    //type, timeStamp, defaultPrevent
+  //    //target, toElement, srcElement,currentTarget
+  //    //clientX, clientY, screenX, screenY
+  //    //altkey, ctrlkey, shiftkey, keycode
+  // },false)
+
+  //events propagation (true--->event capturing or false--->event bubbling)
+
+
+  document.getElementById('images').addEventListener('click', function (e) {
+
+    console.log('click inside the ul')
+
+  }, false)
+
+  document.getElementById('owl').addEventListener('click', function (e) {
+
+    console.log('click on the owl')
+    // e.stopPropagation() //stop event bubbling
+
+  }, false)
+  //output when false by default
+  // click on the owl         --->1st execute --->false---->event bubling --->inside to outside
+  // click inside the ul
+
+  //output when true
+  // click inside the ul  --->1st execute---->true --->event capturing
+  // click on the owl
+
+
+  document.getElementById('google').addEventListener('click', function (e) {
+
+    e.preventDefault();
+    console.log('google clicked') //google clicked
+
+  }, false)
+
+
+
+</script>
+
 </html>
