@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 on asnc js </title>
+</head>
+
+<body>
+  <h1>Chai aur code</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <script>
+    //continuously occur event at aparticular interval of time
+    //  setInterval(()=>{
+    //   console.log('hitesh', Date.now())
+    //  },1000)
+
+    //another process
+    const sayDate = function (str) {
+      console.log('hitesh', Date.now(), str)
+    }
+    //  const intervaliId=setInterval(sayDate,2000, 'hi')
+
+    //for stop interval
+    // clearInterval(intervaliId)
+
+    //with the help of button start and stop the event
+    let idd;  //by default undefined
+    function starting() {
+       if(!idd){
+        idd=setInterval(sayDate,2000, 'startttt')
+       }
+    }
+    function stoping() {
+      clearInterval(idd);
+      idd=null
+    }
+    document.querySelector('#start').addEventListener('click', starting);
+    document.querySelector('#stop').addEventListener('click', stoping);
+
+
+
+  </script>
+</body>
+
+</html>

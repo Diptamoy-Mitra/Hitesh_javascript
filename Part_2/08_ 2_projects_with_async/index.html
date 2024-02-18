@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 on asnc js</title>
+</head>
+
+<body>
+  <h1>Chai aur code</h1>
+  <button id="stop">Stop</button>
+  <script>
+    // its a function  get from browser runtime engine
+    // setTimeout(()=>{
+    //   console.log("hiteshhhh") //after 2 second print 'hiteshhh' only one time
+    // },2000)
+
+    //another process
+    //after 2 sec all execute
+    const sayHitesh = function () {
+      console.log('Hitesh/hhh')
+    }
+    const changeText = function () {
+      document.querySelector('h1').innerHTML = 'best js course'
+    }
+    const changeMe= setTimeout(changeText, 2000); 
+    document.querySelector('#stop').addEventListener('click',()=>{
+      clearTimeout(changeMe) //stop the previous running event
+      console.log('STOPEDDDD')
+    })
+
+  </script>
+</body>
+
+</html>
