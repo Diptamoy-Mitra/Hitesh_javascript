@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request and V8 engine</title>
+</head>
+<body style="background-color: #212121; color: antiquewhite;">
+    
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+    
+</body>
+<script>
+    //XMLHTTPRequest
+    //its a method to request data from a web server
+    //it can request data from a URL without having to refresh the page
+    //it can receive data in the form of text, XML, JSON, HTML, etc.
+    //it can be used to send data to the server
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET', 'https://api.github.com/users/Diptamoy-Mitra');
+    // console.log('Here')
+
+    xhr.onreadystatechange=function(){  //this continuiously check the state of the request
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){ //4 means the request is done
+            // console.log(this.responseText);
+            let data=this.responseText; //this.responseText is the data we get from the server in form of string
+            // console.log(typeof data); //string 
+
+            //to convert the string into json data
+            data=JSON.parse(data);
+            console.log(typeof data); //object
+
+            //display follwers
+            console.log(data.followers); //27
+
+            //console actual api of runtime of the browser
+
+        }
+
+    }
+    xhr.send(); //for call open request 
+
+
+
+
+
+</script>
+</html>
