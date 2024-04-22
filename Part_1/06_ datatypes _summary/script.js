@@ -12,7 +12,7 @@ const id=Symbol('123') //symbol(it represents unique representation)
 const id1=Symbol('123'); 
 console.log((id===id1)) // false (so id1 and id are different, represent both unique id)
 
-const bigNumber=214762734672427427; //BigInt
+const bigNumber=214762734672427427n; //BigInt
 
 
 //NON-PREMETIVE DATATYPES(Reference Type)
@@ -31,6 +31,8 @@ const myFunc=function(){    //function
 myFunc(); //Hello World! 
 
 
-
+//typeof
+console.log(typeof heros) //object
+console.log(typeof myFunc) //function
 
 
