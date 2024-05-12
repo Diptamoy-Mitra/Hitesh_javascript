@@ -21,7 +21,8 @@ const user = {
 // user.welcomeMessage() //hitesh,  welcome to website
 // user.username = "sam"
 // user.welcomeMessage() //sam,  welcome to website
-// console.log(this) //{}
+// console.log(this) //{} //in node enviroment it refer empty object
+//in browser console this print window object
 
 
 //example of this within an function
@@ -32,13 +33,14 @@ function chai(){
 }
 chai()
 
-//arrow functions
+
 const tea=function(){
   let username="dipatmoy"
   console.log(this.username) //undefined //won't work on function this 
 }
 tea()
 
+//arrow functions
 //now define arrow functions here
 const tea1=()=>{
   let username="dipatmoy"
