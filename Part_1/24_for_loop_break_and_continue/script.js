@@ -13,7 +13,7 @@ for (let i = 0; i < 10; i++) {
 for (let i = 0; i <= 2; i++) {
   console.log(`outer loop: ${i}`)
   for (let j = 0; j <= 2; j++) {
-    console.log(`inner loop: ${j} and inner loop ${i}`)
+    console.log(`inner loop: ${j} and outer loop ${i}`)
   }
 }
 

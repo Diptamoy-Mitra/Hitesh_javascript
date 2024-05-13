@@ -3,7 +3,7 @@
 /* 
       javascript execution context
 
-      {}(code) --------> global execution context (this)
+      {}(code) --------> global execution context (this)    v.v.i
 
       1.global execution context
       2.functional execution context 
