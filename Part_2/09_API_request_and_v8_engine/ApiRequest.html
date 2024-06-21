@@ -27,13 +27,14 @@
     xhr.onreadystatechange=function(){  //this continuiously check the state of the request
         console.log(xhr.readyState);
         if(xhr.readyState===4){ //4 means the request is done
-            // console.log(this.responseText);
+            console.log(this.responseText);
             let data=this.responseText; //this.responseText is the data we get from the server in form of string
             // console.log(typeof data); //string 
 
             //to convert the string into json data
             data=JSON.parse(data);
-            console.log(typeof data); //object
+            // console.log(data)
+            // console.log(typeof data); //object
 
             //display follwers
             console.log(data.followers); //27

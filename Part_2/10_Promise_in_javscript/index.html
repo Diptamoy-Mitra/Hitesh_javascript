@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <!-- promise object represent the eventual completion (or failure) of an asynchronous operation and its resulting value. -->
+    <!-- promise is an  object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. -->
 
     <!-- promises is in one of these states:- 
     1. pending :- initial state, neither fulfilled nor rejected.
@@ -73,7 +73,7 @@
         })  
        const username= priomiseFour.then((user)=>{
             console.log(user)
-            return user.username;
+            return user.username; 
         })
         // console.log(username) //unhandled promise rejection asbe erom ekhne value chaile
         .then((username)=>{
