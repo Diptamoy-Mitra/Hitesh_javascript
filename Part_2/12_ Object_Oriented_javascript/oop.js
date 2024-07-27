@@ -43,5 +43,5 @@ console.log(userOne)//User { username: 'hitesh', loginCount: 12, isLoggedIn: tru
 
 const userTwo = new User('chaiAurcode', 11, false)
 console.log(userTwo) //User { username: 'chaiAurcode', loginCount: 11, isLoggedIn: false }
-console.log(userTwo.constructor)//[Function: User] //function referece
+console.log(userTwo.constructor)//[Function: User] //function reference
 
